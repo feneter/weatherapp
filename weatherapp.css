@@ -1,0 +1,65 @@
+
+body {
+    background-color: #f4eee1;
+    color: #2d2921;
+}
+
+.thin-border {
+    border: 1px solid #423419;
+}
+
+.header{
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+}
+
+.panel{
+    width: 40%; 
+    margin: 20px; /* distance between container/box elements*/
+    padding: 10px; /* distance between container/box and its contents*/
+    text-align: center;
+    border-radius: 10px;
+}
+
+.panel:hover {
+    background: #f2f0ed;
+}
+
+.temperature {
+
+}
+
+/**
+for positioning
+ use float (left, right, none, inherit), position (fixed, absolute, relative ....) (right : 5px, left: 20px;)
+*/
+.wind {
+}
+
+.cloud {
+
+}
+
+.precipitation {
+}
+
+.weather-measurement {
+    color: #4f4a41;
+}
+
+.circle {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: url('logo.png');
+    background-color: #4372b3;
+}
+
+.circle img {
+    height: 180px;
+}
+
+#temp {
+    font-size: 3em;
+}

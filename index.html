@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="width=device-width,initial-scale-1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="weatherapp.css">
+        <script src="weather.js"></script>
+        <title>WeatherApp</title>
+    </head>
+    <body>
+        <div class="circle thin-border">
+            <!--<img src="logo.jpg" alt="logo" title="Our logo" /> remember to include alt attr anytime you define an image tag-->
+        </div>
+        <div class="header thin-border">
+            <p class="weather-measurement"></p>
+        </div>
+
+        <div class="panel temperature thin-border">
+            <img src="sun.png" alt="sun" />
+
+            <p class="weather-measurement"><span id="temp">18C</span> <span id="temp-max">20C</span> <span id="temp-min">15C</span> </p>
+        </div>
+
+        <div class="panel wind thin-border">
+            <img src="wind.png" alt="wind" />
+
+            <p class="weather-measurement"><span id="wind-speed">213km/hr</span> <span id="wind-direction">NE</span></p>
+        </div>
+
+        <div class="panel cloud thin-border">
+            <img src="clouds.png" alt="clouds" />
+            <p class="weather-measurement"><span id="cloud">20%</span></p>
+        </div>
+
+        <div class="panel precipitation thin-border">
+            <img src="precipitation.png" alt="precipitation" />
+            <p class="weather-measurement"><span id="precipitation">anything</span></p>
+        </div>
+    </body>
+</html>
