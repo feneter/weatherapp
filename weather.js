@@ -1,6 +1,6 @@
 const api = 'api.openweathermap.org/data/2.5/weather';
 const id = 160260;
-const appid = '';
+const appid = ''; //add your appid here, and remember to remove it before pushing to github
 
 /**
  * schedule the function to update every 20 seconds.
@@ -37,11 +37,22 @@ function printWindData(speed, direction) {
 
 
 function printClouds(cloud){
-    document.getElementById('cloud').innerHTML = cloud;
+    setDomElement('cloud', cloud);
 }
 
 function printPrecipitation(humidity) {
-    document.getElementById('precipitation').innerHTML = humidity;
+    setDomElement('precipitation', humidity);
+}
+
+/**
+ * instead of calling document.getElementById() in every function, we can
+ * factor that out here and then just pass in the 
+ * element id and the value we want to set
+ * @param {*} element_id 
+ * @param {*} value 
+ */
+function setDomElement(element_id, value) {
+    document.getElementById(element_id).innerHTML = value;
 }
 
 /**
