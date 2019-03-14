@@ -1,6 +1,6 @@
 const api = 'api.openweathermap.org/data/2.5/weather';
-const id = 160260;
-const appid = ''; //add your appid here, and remember to remove it before pushing to github
+const id = 160196;
+const appid = 'd3243a8091f7937403f8541ce92c32c8'; //add your appid here, and remember to remove it before pushing to github
 
 /**
  * schedule the function to update every 20 seconds.

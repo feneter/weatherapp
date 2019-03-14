@@ -1,0 +1,64 @@
+body{
+	 background-color: #f4eee1;
+    color: #2d2921;
+}
+header{
+	width:100%;
+}
+.logo{
+	width:80px;
+	background-color:#4372b3;
+	border-radius:50%
+}
+.panel{
+	width:40%;
+	margin:20px;
+	padding:15px;
+	tex-align:center;
+	border:1px solid #423419;
+	border-radius:10%;
+	
+}
+.panel:hover{
+	background-color:rgb(0,255,255,0.1);
+	
+}
+.weather-measurement {
+    color: #4f4a41;
+}
+.thin-border{
+}
+.temperature{
+}
+.wind{
+	height:220px;
+	position:absolute;
+	top:190px;
+	right:20px;
+	
+}
+.precipitation{
+}
+.cloud{
+	
+	position:absolute;
+	top:465px;
+	right:20px;
+}
+.main{
+	font-weight:900;
+	font-size:70px;
+	color;#000000;
+}
+.minor{
+	font-weight:500;
+	font-size:20px;
+}
+button{
+		font-size:16px;
+}
+.area{
+	font-size:40px;
+	color:rgb(0,0,0);
+	background:rgb(0,255,255,0.1);
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta name="width=device-width,initial-scale-1">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="stylesheet" href="weather.css">
+<script src="weather.js"></script>
+</head>
+<body>
+	<div class="header">
+			<div >
+			<img class="logo" src="logo.png" alt="logo" title="the logo" ><span class="main">Feneter WeatherApp</span>
+			<marquee class="area" id="city"  id="country"text-alingn="center"></marquee>
+			</div>
+			<div align="right">
+			<input type="text" id="location" name="txt" onclick="this.value=''" />
+			<button onclick="getVal();">search</button>
+			</div>
+		</div>
+	<div class="panel temperature">
+	<img src="sun.png" alt="sun-icon" align="left">
+	<p  class="weather-measurement"><span class="main" id="temp">20</span></p>
+	<pre class="minor" id="temp.min">23</pre>
+	<pre class="minor" id="temp.max">20</pre>
+	</div>
+	<div class="panel wind">
+	<img src="wind.png" alt="wind-icon"align="left">
+	<p class="weather-measurement"><span class="main" id="wind.speed">speed</span><span class="minor" id="wind.direction">direction</span></p>
+	</div>
+	<div class="panel precipitation">
+	<img src="precipitation.png" alt="rain-icon" align="left">
+	<p class="weather-measurement main" id="humidity">humidity</p>
+	</div>
+	<div class="panel cloud">
+	<img src="clouds.png" alt="cloud-icon" align="left">
+	<p class="main" id="clouds">cluod</p>
+	</div>
+
+</body>
+</html>
