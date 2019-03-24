@@ -3,18 +3,19 @@
 <head>
 <meta name="width=device-width,initial-scale-1">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-<link rel="stylesheet" href="weather.css">
-<script src="weather.js"></script>
+<link rel="stylesheet" href="weather-yuda.css">
+<script src="weather-yuda.js"></script>
 </head>
 <body>
 	<div class="header">
 			<div >
 			<img class="logo" src="logo.png" alt="logo" title="the logo" ><span class="main">Feneter WeatherApp</span>
-			<marquee class="area" id="city"  id="country"text-alingn="center"></marquee>
+			<marquee class="area" id="city"   text-alingn="center"></marquee>
 			</div>
+			
 			<div align="right">
 			<input type="text" id="location" name="txt" onclick="this.value=''" />
-			<button onclick="getVal();">search</button>
+			<button type="submit"><i class="search">search</i></button>
 			</div>
 		</div>
 	<div class="panel temperature">

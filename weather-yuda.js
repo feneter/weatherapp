@@ -1,56 +1,49 @@
 
 
 const api ='api.openweathermap.org/data/2.5/weather';
-const city='njombe';
-//var city= document.getElementTagName('input')value;
+const city= 'kigoma'
 const country='tz';
 const appid='d3243a8091f7937403f8541ce92c32c8';
- 
- 
-/*setInterval(() => {
-	update();
-}. 20000);
 
-function update()
+ setInterval(() => {
+	 updating();
+ },20000);
+
+
+function updating()
 {
-	console.log("updating....");
-}*/
-fetch("https://"+ api +"?q="+ city +","+ country +" &appid="+ appid)
+	console.log("updating..");
+	fetch("https://"+ api +"?q="+ city +","+ country +" &appid="+ appid)
 	.then(response => response.json())
 	.then(data => {
 		printTemperature(data.main.temp,data.main.temp_min,data.main.temp_max);
 		printWind(data.wind.speed,data.wind.deg);
 		printClouds(data.clouds.all);
 		printPrecipitation(data.main.humidity);
-		printPlace(data.name,data.sys.country);
+		printPlace(data.name);
 		
 		
 	});
 	
+}	
 
-	
-/*function getVal()
-{
-	var city= document.getElementByTagname('location').value;
-	alert(location);
-}*/
 function printWind(speed , direction)
 {
 	document.getElementById('wind.speed').innerHTML=speed+"KmpH";
 	document.getElementById('wind.direction').innerHTML=direction;
 }
-function printPlace(city,country)
+function printPlace(city)
 {
 document.getElementById('city').innerHTML=city+ " - weather now";
-document.getElementById('country').innerHTML=country;	
+	
 }
 function printPrecipitation(humidity)
 {
-	document.getElementById('humidity').innerHTML=humidity;
+	document.getElementById('humidity').innerHTML=humidity+"g/m3";
 }
 function printClouds(clouds)
 {
-	document.getElementById('clouds').innerHTML=clouds;
+	document.getElementById('clouds').innerHTML=clouds+"Okta";
 }
 
 function printTemperature( temp ,min,max)

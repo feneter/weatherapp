@@ -35,9 +35,15 @@ for positioning
  use float (left, right, none, inherit), position (fixed, absolute, relative ....) (right : 5px, left: 20px;)
 */
 .wind {
+	position:absolute;
+	top:270px;
+	right:20px;
 }
 
 .cloud {
+	position:absolute;
+	top:490px;
+	right:20px;
 
 }
 
