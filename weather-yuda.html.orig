@@ -4,6 +4,10 @@
 <meta name="width=device-width,initial-scale-1">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link rel="stylesheet" href="weather-yuda.css">
+<<<<<<< HEAD
+<script src="weather-yuda.js"></script>
+=======
+>>>>>>> origin/sovello
 </head>
 <body>
 	<div class="header">
@@ -13,10 +17,17 @@
 			</div>
 			
 			<div align="right">
+<<<<<<< HEAD
+			<input type="text" id="location" name="txt" onclick="this.value=''" />
+			<button type="submit"><i class="search">search</i></button>
+			</div>
+		</div>
+=======
 			<input type="text" id="location" name="txt" />
 			<button id="search_button" type="submit"><i class="search">search</i></button>
 			</div>
 		</div> 
+>>>>>>> origin/sovello
 	<div class="panel temperature">
 	<img src="sun.png" alt="sun-icon" align="left">
 	<p  class="weather-measurement"><span class="main" id="temp">20</span></p>
@@ -35,8 +46,10 @@
 	<img src="clouds.png" alt="cloud-icon" align="left">
 	<p class="main" id="clouds">cluod</p>
 	</div>
+<<<<<<< HEAD
 
+=======
 	<script src="weather-yuda.js"></script>
-
+>>>>>>> origin/sovello
 </body>
 </html>
