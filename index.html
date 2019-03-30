@@ -4,7 +4,7 @@
         <meta name="width=device-width,initial-scale-1">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link rel="stylesheet" href="weatherapp.css">
-        <script src="weather.js"></script>
+        
         <title>WeatherApp</title>
     </head>
     <body>
@@ -14,27 +14,33 @@
         <div class="header thin-border">
             <p class="weather-measurement"></p>
         </div>
+        <div class="container">
+            <div class="panel temperature horizontal-box thin-border">
+                <img src="sun.png" alt="sun" style="visibility:hidden" />
 
-        <div class="panel temperature thin-border">
-            <img src="sun.png" alt="sun" />
+                <p class="weather-measurement"><span id="temp">18C</span> <span id="temp-max">20C</span> <span id="temp-min">15C</span> </p>
+            </div>
 
-            <p class="weather-measurement"><span id="temp">18C</span> <span id="temp-max">20C</span> <span id="temp-min">15C</span> </p>
+            <div class="panel wind horizontal-box thin-border">
+                <img src="wind.png" alt="wind" />
+
+                <p class="weather-measurement"><span id="wind-speed">213km/hr</span> <span id="wind-direction">NE</span></p>
+            </div>
+
+            <div class="panel cloud horizontal-box thin-border">
+                <img src="clouds.png" alt="clouds" />
+                <p class="weather-measurement"><span id="cloud">20%</span></p>
+            </div>
+
+            <div class="panel precipitation horizontal-box thin-border">
+                <img src="precipitation.png" alt="precipitation" />
+                <p class="weather-measurement"><span id="precipitation">anything</span></p>
+            </div>
         </div>
-
-        <div class="panel wind thin-border">
-            <img src="wind.png" alt="wind" />
-
-            <p class="weather-measurement"><span id="wind-speed">213km/hr</span> <span id="wind-direction">NE</span></p>
-        </div>
-
-        <div class="panel cloud thin-border">
-            <img src="clouds.png" alt="clouds" />
-            <p class="weather-measurement"><span id="cloud">20%</span></p>
-        </div>
-
-        <div class="panel precipitation thin-border">
-            <img src="precipitation.png" alt="precipitation" />
-            <p class="weather-measurement"><span id="precipitation">anything</span></p>
-        </div>
+        <footer>
+            <p>&copy; feneter</p>
+            <p>Njombe - Dar es Salam<span class="span-box"> Tanzania</span></p>
+        </footer>
+        <script src="weather.js"></script>
     </body>
 </html>

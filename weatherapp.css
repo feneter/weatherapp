@@ -30,6 +30,9 @@ body {
 
 }
 
+.horizontal-box{
+    display: inline-block;
+}
 /**
 for positioning
  use float (left, right, none, inherit), position (fixed, absolute, relative ....) (right : 5px, left: 20px;)
@@ -42,6 +45,7 @@ for positioning
 }
 
 .precipitation {
+    
 }
 
 .weather-measurement {
@@ -62,4 +66,12 @@ for positioning
 
 #temp {
     font-size: 3em;
+}
+
+#precipitation {
+    display: none;
+}
+
+.span-box {
+    display: block;
 }
