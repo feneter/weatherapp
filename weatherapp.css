@@ -9,19 +9,21 @@ body {
 }
 
 .header{
-    width: 100%;
+    width: 80%;
     margin: 20px;
     padding: 10px;
 }
 
 .panel{
-    width: 40%; 
     margin: 20px; /* distance between container/box elements*/
     padding: 10px; /* distance between container/box and its contents*/
     text-align: center;
     border-radius: 10px;
 }
 
+.panel img {
+    width: 100%;
+}
 .panel:hover {
     background: #f2f0ed;
 }
@@ -61,5 +63,10 @@ for positioning
 }
 
 #temp {
-    font-size: 3em;
+    font-size: 1.5em;
+}
+
+.container {
+    display: grid; /** defines the whole container element to be a grid**/
+    grid-template-columns: 600px 200px 400px 200px; /** this defines 4 columns of different widths **/
 }

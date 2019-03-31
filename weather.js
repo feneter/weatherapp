@@ -2,6 +2,7 @@ const api = 'api.openweathermap.org/data/2.5/weather';
 const id = 160260;
 const appid = ''; //add your appid here, and remember to remove it before pushing to github
 
+update();
 /**
  * schedule the function to update every 20 seconds.
  * this is too much for weather info, we could only update every 30 mins say.
