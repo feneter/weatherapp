@@ -8,11 +8,12 @@ const appid='d3243a8091f7937403f8541ce92c32c8';
 //setInterval(() => {
 	updating();
 //},20000);
->>>>>>> origin/sovello
+
 
 
 function updating()
 {
+
 	console.log("updating..");
 	fetch("https://"+ api +"?q="+ city +","+ country +" &appid="+ appid)
 	.then(response => response.json())
@@ -26,11 +27,16 @@ function updating()
 		printClouds(data.clouds.all);
 		printPrecipitation(data.main.humidity);
 		printPlace(data.name);
-	}).catch(error => { //any errors returned from above will be handled right here.
-		alert(error);
-	});
+	})
+	try {
+	if(city != data.name) throw "err";
+}
+	catch (err){
+		alert('Enter Regin/City name in Tanzanian');
+	}
 	
-}	
+}
+
 
 function printWind(speed , direction)
 {
@@ -74,4 +80,13 @@ search_button.addEventListener('click', function(){ //wait until user clicks to 
 	city = search_box.value; //assign search value to city variable
 	search_box.value = ''; //clear the search box
 	updating(); //update
+});
+
+document.getElementByTagName('input');
+input.addEventListener("keyup",
+function (event) {
+	if (event.keyCode ===13) { event.preventDefault();
+	document.getelementById("EnterKey").click();}
+});
+	
 
