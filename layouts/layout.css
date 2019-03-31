@@ -1,0 +1,28 @@
+.header{
+    background-color: bisque;
+    height: 200px;
+    width: 90%;
+}
+
+.header .sub-header{ /** sub header child to header **/
+    background-color: blueviolet;
+    width: 100%;
+}
+.sidebar-left {
+    background-color: rgb(209, 107, 184);
+    height: 400px;
+}
+.sidebar-left .sub-header {/** subheaader child to sidebar-left **/
+    background-color: brown;
+    width: 80%;
+}
+
+.sidebar-right {
+    background-color: aquamarine;
+    height: 400px;
+}
+
+.footer {
+    background-color: aliceblue;
+    height: 50px;
+}
