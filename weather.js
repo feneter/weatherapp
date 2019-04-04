@@ -1,6 +1,5 @@
 const api = 'api.openweathermap.org/data/2.5/weather';
-let city = 'njombe';
-const country = 'tz';
+const id = 160196;
 const appid = 'd3243a8091f7937403f8541ce92c32c8'; //add your appid here, and remember to remove it before pushing to github
 
 update();

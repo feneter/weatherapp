@@ -1,0 +1,65 @@
+body{
+	 background-color: #f4eee1;
+    color: #2d2921;
+}
+header{
+	width:100%;
+}
+.logo{
+	width:80px;
+	background-color:#4372b3;
+	border-radius:50%
+}
+.panel{
+	width:auto;
+	border-radius:15%;
+	border:solid #000000;
+	display:inline;
+}
+.container{
+	display: grid;
+	grid-template-columns: 300px 300px 300px 300px ;
+	grid-gap:20px;
+	
+}
+.panel img{
+	display:inline;
+}
+.panel:hover{
+	background-color:rgb(0,255,255,0.1);
+	
+}
+.weather-measurement {
+    color: #4f4a41;
+}
+.thin-border{
+}
+.temperature{
+}
+.wind{
+	display:inline;
+	
+	
+}
+.precipitation{
+}
+.cloud{
+	
+	
+.main{
+	font-weight:900;
+	font-size:70px;
+	color;#000000;
+}
+.minor{
+	font-weight:500;
+	font-size:20px;
+}
+button{
+		font-size:16px;
+}
+.area{
+	font-size:40px;
+	color:rgb(0,0,0);
+	background:rgb(0,255,255,0.1);
+}
