@@ -31,6 +31,14 @@ body {
 .temperature {
 
 }
+.info{
+	width:200px;
+	display:block;
+	border:solid green 2px;
+}
+.box{
+	align:left;
+}
 
 /**
 for positioning
@@ -68,5 +76,5 @@ for positioning
 
 .container {
     display: grid; /** defines the whole container element to be a grid**/
-    grid-template-columns: 600px 200px 400px 200px; /** this defines 4 columns of different widths **/
+    grid-template-columns: 200px 200px 200px 200px; /** this defines 4 columns of different widths **/
 }

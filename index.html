@@ -4,16 +4,19 @@
         <meta name="width=device-width,initial-scale-1">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link rel="stylesheet" href="weatherapp.css">
-        <script src="weather.js"></script>
         <title>WeatherApp</title>
     </head>
     <body>
         <div class="circle thin-border">
             <!--<img src="logo.jpg" alt="logo" title="Our logo" /> remember to include alt attr anytime you define an image tag-->
         </div>
-        <div class="header thin-border">
-            <p class="weather-measurement"></p>
-        </div>
+		<div class="info">
+		<marquee id="city"   text-alingn="center"></marquee>
+		</div>
+		<div >
+			<input id="search" id="search_box" type="text"></input>
+			<button id="btn"  >search</button>		
+        </div>																														
 
         <div class="container">
             <div class="panel temperature thin-border">
@@ -38,5 +41,6 @@
                 <p class="weather-measurement"><span id="precipitation">anything</span></p>
             </div>
         </div>
+		 <script src="weather.js"></script>
     </body>
 </html>
