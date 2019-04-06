@@ -23,7 +23,7 @@ header{
 	
 }
 .panel img{
-	display:inline;
+	display:100%;
 }
 .panel:hover{
 	background-color:rgb(0,255,255,0.1);

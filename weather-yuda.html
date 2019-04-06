@@ -1,40 +1,95 @@
 <!doctype html>
 <html>
 <head>
+<link rel="stylesheet" href="weather-yuda2.css">
 <meta name="width=device-width,initial-scale-1">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-<link rel="stylesheet" href="weather-yuda.css">
 </head>
 <body>
 	<div class="header">
-			<div >
-			<img class="logo" src="logo.png" alt="logo" title="the logo" ><span class="main">Feneter WeatherApp</span>
-			<marquee class="area" id="city"   text-alingn="center"></marquee>
-			</div>
+		<div >
+			<img class="logo" src="logo.png" alt="logo" title="the logo" ><span class="feneter">Feneter WeatherApp</span>
 			
-			<div align="right">
-			<input type="text" id="location" name="txt" />
-			<button id="search_button" type="submit"><i class="search">search</i></button>
+		</div>
+			
+		<div align="right">
+			<input type="text" id="location"  />
+			<button id="search_button" type="submit">search</button>
+			<marquee  id="city"   text-alingn="center"></marquee>
+		</div>
+	</div> 
+	<section>
+		<div class="today">
+			<div class="">
+				<img src="sun.png" alt="sun-icon" align="left">
+				<p  class="weather-measurement"><span class="main" id="temp">20</span></p>
+				<pre class="minor" id="temp.min">23</pre>
+				<pre class="minor" id="temp.max">20</pre>
 			</div>
-		</div> 
-	<div class="panel temperature">
-	<img src="sun.png" alt="sun-icon" align="left">
-	<p  class="weather-measurement"><span class="main" id="temp">20</span></p>
-	<pre class="minor" id="temp.min">23</pre>
-	<pre class="minor" id="temp.max">20</pre>
-	</div>
-	<div class="panel wind">
-	<img src="wind.png" alt="wind-icon"align="left">
-	<p class="weather-measurement"><span class="main" id="wind.speed">speed</span><span class="minor" id="wind.direction">direction</span></p>
-	</div>
-	<div class="panel precipitation">
-	<img src="precipitation.png" alt="rain-icon" align="left">
-	<p class="weather-measurement main" id="humidity">humidity</p>
-	</div>
-	<div class="panel cloud">
-	<img src="clouds.png" alt="cloud-icon" align="left">
-	<p class="main" id="clouds">cluod</p>
-	</div>
+			<div class="">
+				<img src="wind.png" alt="wind-icon"align="left">
+				<p class="weather-measurement"><span class="main" id="wind.speed">speed</span><span class="minor" id="wind.direction">direction</span></p>
+			</div>
+			<div class="">
+				<img src="precipitation.png" alt="rain-icon" align="left">
+				<p class="weather-measurement main" id="humidity">humidity</p>
+			</div>
+			<div class="">
+				<img src="clouds.png" alt="cloud-icon" align="left">
+				<p class="main" id="clouds">cloud</p>
+			</div>
+		</div>
+		<div class="news">
+			<img src="weather-img2.jpg" alt="wind-icon"align="top">
+			<p> weather news  hapa ndo maelezo ya weather na mbwembwe tu
+			weather news  hapa ndo maelezo ya weather na mbwembwe tu weather 
+			news  hapa ndo maelezo ya weather na mbwembwe weather news
+			hapa ndo maelezo ya weather na mbwembwe tutu</p>
+			
+		</div>
+		<div class="4nextDays day1">
+			<h2>mon-aprl/1</h2>
+			<ul>
+			  <li> rain</li>
+			  <li>wind</li>
+			  <li>temperature</li>
+			  <li>cluod</li>
+			</ul>
+		</div>
+		<div class="4nextDays day2">
+		<h2>Tue-aprl/2</h2>
+			<ul>
+			  <li> rain</li>
+			  <li>wind</li>
+			  <li>temperature</li>
+			  <li>cluod</li>
+			</ul>
+			
+		</div>
+		<div class="4nextDays day3">
+		<h2>Wens-aprl/3</h2>
+			<ul>
+			  <li> rain</li>
+			  <li>wind</li>
+			  <li>temperature</li>
+			  <li>cluod</li>
+			</ul>
+			
+		</div>
+		<div class="4nextDays day4">
+		<h2>Thr-aprl/4</h2>
+			<ul>
+			  <li> rain</li>
+			  <li>wind</li>
+			  <li>temperature</li>
+			  <li>cluod</li>
+			</ul>
+			
+		</div>
+	</section>
+<footer>
+<p align="center">@feneter</p>
+</footer>
 	<script src="weather-yuda.js"></script>
 </body>
 </html>
