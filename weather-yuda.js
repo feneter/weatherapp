@@ -128,10 +128,10 @@ function weatherForecast (){
 		for(i = 0; i < 4; i++){
 			printForecast(i+1, TimeConversion(data.list[i].dt), 'rain', data.list[i].wind.speed, kelvinToCelcious(data.list[i].main.temp), data.list[i].clouds.all);
 		}
-		document.getElementById("firstday").innerHTML=TimeConversion(data.list[0].dt);
-		document.getElementById("secondday").innerHTML=TimeConversion(data.list[1].dt);
-		document.getElementById("thirdday").innerHTML=TimeConversion(data.list[2].dt);
-		document.getElementById("fourthday").innerHTML=TimeConversion(data.list[3].dt);
+		// document.getElementById("firstday").innerHTML=TimeConversion(data.list[0].dt);
+		// document.getElementById("secondday").innerHTML=TimeConversion(data.list[1].dt);
+		// document.getElementById("thirdday").innerHTML=TimeConversion(data.list[2].dt);
+		// document.getElementById("fourthday").innerHTML=TimeConversion(data.list[3].dt);
 	})
 
 }
