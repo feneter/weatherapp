@@ -94,13 +94,13 @@ function printForecast(day, time, rains, winds, temperature, clouds){
 	h2.appendChild(h2Text); // append text node to h2
 	let ul = document.createElement('ul'); // create <ul>
 	let rain = document.createElement('li'); // creates <li>
-	rain.appendChild(document.createTextNode(rains)); // create text node and append its to <li> to get <li>Rain</li>
+	rain.appendChild(document.createTextNode(`Rain: ${rains}`)); // create text node and append its to <li> to get <li>Rain</li>
 	let wind = document.createElement('li');
-	wind.appendChild(document.createTextNode(winds));
+	wind.appendChild(document.createTextNode(`Wind speed: ${winds}`));
 	let temp = document.createElement('li')
-	temp.appendChild(document.createTextNode(temperature));
+	temp.appendChild(document.createTextNode(`Temperature: ${temperature}`));
 	let cloud = document.createElement('li');
-	cloudtxt = document.createTextNode(clouds);
+	cloudtxt = document.createTextNode(`Cloud cover: ${clouds}%`);
 	cloud.appendChild(cloudtxt);
 
 	ul.appendChild(rain); //appends <li>Rain</li> to <ul>
@@ -109,7 +109,12 @@ function printForecast(day, time, rains, winds, temperature, clouds){
 	ul.appendChild(cloud);
 	div.appendChild(h2); // appends <div><h2>Time</h2></div>
 	div.appendChild(ul); // appends <ul> with content ot <div>
-	document.getElementById('forecasts').appendChild(div); // this appends the div created to the div with id="forecasts" in the HTML
+	//document.getElementById('forecasts').appendChild(div); // this appends the div created to the div with id="forecasts" in the HTML
+	
+	// to attach to the <section> tag.
+	// document.getElementsByTagName returns an element of HTML nodes matching the tag name
+	// get the section: document.getElementsByTagName(('section')) this returns an array. but we have only one section tag, so it will be at index 0
+	document.getElementsByTagName('section')[0].appendChild(div);
 }
 
 
@@ -120,7 +125,6 @@ function weatherForecast (){
 	.then (data => {
 		// data.list is an array of *hourly* weather data
 		// we can loop this 4 times to extract weather data for each *hour*
-		console.log(data.list);
 		for(i = 0; i < 4; i++){
 			printForecast(i+1, TimeConversion(data.list[i].dt), 'rain', data.list[i].wind.speed, kelvinToCelcious(data.list[i].main.temp), data.list[i].clouds.all);
 		}
