@@ -76,25 +76,59 @@ function printTemperature( temp ,min,max)
 		document.getElementById('temp.min').innerHTML=Math.round(min-273)+"C min";
 		document.getElementById('temp.max').innerHTML=Math.round(max-273)+"C max";
 }
-function kelvinToCelcious (kelvin)
-{
-	return `${kelvin-273}C`;
+function kelvinToCelcious (kelvin) {
+	let t = kelvin-273;
+	Number.parseFloat(t).toFixed(2);
+	return `${t}C`;
 }
-function TimeConversion(dt)
-{
-var dt = new Date(dt*1000);
-document.getElementById("firstday").innerHTML=dt;
-return dt;  
+function TimeConversion(dt) {
+	var dt = new Date(dt*1000);
+	return dt;  
 }
+function printForecast(day, time, rains, winds, temperature, clouds){
+	
+	let div = document.createElement('div'); // creates a <div> element NODE
+	div.setAttribute('class', `4nextDays day${day}`); // add class to div, so it looks like <div class="4nextDays day1">
+	let h2 = document.createElement('h2'); // creates an <h2> element with text
+	let h2Text = document.createTextNode(time); // creates a text Node with text time
+	h2.appendChild(h2Text); // append text node to h2
+	let ul = document.createElement('ul'); // create <ul>
+	let rain = document.createElement('li'); // creates <li>
+	rain.appendChild(document.createTextNode(rains)); // create text node and append its to <li> to get <li>Rain</li>
+	let wind = document.createElement('li');
+	wind.appendChild(document.createTextNode(winds));
+	let temp = document.createElement('li')
+	temp.appendChild(document.createTextNode(temperature));
+	let cloud = document.createElement('li');
+	cloudtxt = document.createTextNode(clouds);
+	cloud.appendChild(cloudtxt);
+
+	ul.appendChild(rain); //appends <li>Rain</li> to <ul>
+	ul.appendChild(wind); // appends <li>Wind</li>
+	ul.appendChild(temp);
+	ul.appendChild(cloud);
+	div.appendChild(h2); // appends <div><h2>Time</h2></div>
+	div.appendChild(ul); // appends <ul> with content ot <div>
+	document.getElementById('forecasts').appendChild(div); // this appends the div created to the div with id="forecasts" in the HTML
+}
+
+
 function weatherForecast (){
 
-fetch("https://"+ api2 +"?q="+ city +","+ country +" &appid="+ appid)
-.then (response => response.json())
-.then (data => {
-	TimeConversion(data.list.dt);
-	
-	
-})
+	fetch("https://"+ api2 +"?q="+ city +","+ country +" &appid="+ appid)
+	.then (response => response.json())
+	.then (data => {
+		// data.list is an array of *hourly* weather data
+		// we can loop this 4 times to extract weather data for each *hour*
+		console.log(data.list);
+		for(i = 0; i < 4; i++){
+			printForecast(i+1, TimeConversion(data.list[i].dt), 'rain', data.list[i].wind.speed, kelvinToCelcious(data.list[i].main.temp), data.list[i].clouds.all);
+		}
+		document.getElementById("firstday").innerHTML=TimeConversion(data.list[0].dt);
+		document.getElementById("secondday").innerHTML=TimeConversion(data.list[1].dt);
+		document.getElementById("thirdday").innerHTML=TimeConversion(data.list[2].dt);
+		document.getElementById("fourthday").innerHTML=TimeConversion(data.list[3].dt);
+	})
 
 }
 
