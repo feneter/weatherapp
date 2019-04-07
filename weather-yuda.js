@@ -1,6 +1,7 @@
 
 
 const api ='api.openweathermap.org/data/2.5/weather';
+const api2='api.openweathermap.org/data/2.5/forecast';
 let city= 'kigoma'
 const country='tz';
 const appid='d3243a8091f7937403f8541ce92c32c8';
@@ -23,8 +24,11 @@ search_button.addEventListener('click', function (){
 
 function updating()
 {
+	weatherForecast();
 	console.log("updating..");
 	fetch("https://"+ api +"?q="+ city +","+ country +" &appid="+ appid)
+	//http://api.openweathermap.org/data/2.5/forecast?q=Njombe,tz&&appid=d3243a8091f7937403f8541ce92c32c8 (weather forecast link)
+	//https://api.openweathermap.org/data/2.5/weather?q=Njombe,tz&appid=d3243a8091f7937403f8541ce92c32c8 (current weather link)
 	.then(response => response.json())
 	.then(data => {
 
@@ -75,6 +79,23 @@ function printTemperature( temp ,min,max)
 function kelvinToCelcious (kelvin)
 {
 	return `${kelvin-273}C`;
+}
+function TimeConversion(dt)
+{
+var dt = new Date(dt*1000);
+document.getElementById("firstday").innerHTML=dt;
+return dt;  
+}
+function weatherForecast (){
+
+fetch("https://"+ api2 +"?q="+ city +","+ country +" &appid="+ appid)
+.then (response => response.json())
+.then (data => {
+	TimeConversion(data.list.dt);
+	
+	
+})
+
 }
 
 /*let search_button = document.getElementById('search_button'); //get the search_button
