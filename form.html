@@ -4,28 +4,35 @@
 </head>
 <body>
 <h1>Feneter Form</h1>
-First name:</br>
-<input type="text" name="fname"></input></br>
-Second name:</br>
-<input type="text" name="sname"></input></br>
-Third name:</br>
-<input type="text" name="tname"></input></br>
-Phone number:</br>
-<input type="text" name="mobile"></input></br>
-Email:</br>
-<input type="text" name="tname"></input></br>
-Discription:</br>
-<textarea rows="6" cols="50" name="text" >Enter text here</textarea></br>
-Gender:</br>
-<input type="radio" name="male"></input>
-Male</br>
-<input type="radio" name="female"></input> 
-Female </br>
- OK to contact:</br>
- <input type="checkbox" name="confirm"></input>Yes/<input type="checkbox"></input>No
+<form method="POST" action="" id="contact_form"> <!--method either GET or POST, methods also called HTTP verbs: GET, POST, PUT, DELETE, PATCH -->
+<p class="errors" id="errors"></p>
+<label>First name*:</label></br>
+<input type="text" name="fname" id="fname"></input><br>
+<label>Second name*:</label></br>
+<input type="text" name="sname" id="sname"></input></br> <!-- the break tag is just <br>: open tag-->
+<label>Third name:</label></br>
+<input type="text" name="tname" id="tname"></input></br> <!--the input is an open tag <input type="" name="">-->
+<label>Phone number:</label></br>
+<input type="text" name="mobile" id="mobile"></input></br>
+<label>Email:</label></br>
+<input type="text" name="email" id="email"></input></br>
+<label>Discription:</label></br>
+<textarea rows="6" cols="50" name="description" id="description">Enter text here</textarea></br>
+<label>Gender:</label></br>
+<input type="radio" name="gender" id="male"></input>
+<label>Male:</label></br>
+<input type="radio" name="gender" id="female"></input> 
+<label>Female:</label></br>
+<label>Age:</label><br>
+<input type="text" name="age" id="age"><br>
+<label>Year of birth</label><br>
+<input type="text" name="birth_year" id="birth_year"><br>
 
+ <label>OK to contact:</label></br>
+ <input type="radio" name="contact" id="yes"></input>Yes <input type="radio" name="contact" id="no"></input>No
+<br>
 <input type="submit" value="submit"></input>
 </form>
->
+<script src="validator.js"></script>
 </body>
 </html>
