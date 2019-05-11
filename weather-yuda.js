@@ -11,16 +11,29 @@ updating();
 let search_box=document.getElementById('location');
 let search_button= document.getElementById('search_button');
 search_button.addEventListener('click', function (){
-	if(!search_box.value){
-		alert("You have to enter City name!");
-		return;
-	}
-	city= search_box.value;
-	search_box.value='';
-	updating();
+	
+		if(!search_box.value){
+			alert("You have to enter City name!");
+			return;
+		}
+		else if(search_box.value == (keyCode==13)){
+		city= search_box.value;
+		search_box.value='';
+		updating();
+		}
 });	
-		
 
+		
+function Enterkey (){
+location.addEventListener('keyup', function(event){
+		if(event.keyCode === 13){
+			city= search_box.value;
+		search_box.value='';
+		updating();
+		
+		}
+	});
+}
 
 function updating()
 {
@@ -81,10 +94,20 @@ function kelvinToCelcious (kelvin) {
 	Number.parseFloat(t).toFixed(2);
 	return `${t}C`;
 }
+
 function TimeConversion(dt) {
 	var dt = new Date(dt*1000);
 	return dt;  
 }
+	/*<div class="4nextDays day//1//">
+			<h2 id="firstday">mon-aprl/1</h2>
+			<ul>
+			  <li>rain</li>
+			  <li>wind</li>
+			  <li>temperature</li>
+			  <li>cluod</li>
+			</ul>
+		</div>*/
 function printForecast(day, time, rains, winds, temperature, clouds){
 	
 	let div = document.createElement('div'); // creates a <div> element NODE
@@ -100,15 +123,22 @@ function printForecast(day, time, rains, winds, temperature, clouds){
 	let temp = document.createElement('li')
 	temp.appendChild(document.createTextNode(`Temperature: ${temperature}`));
 	let cloud = document.createElement('li');
-	cloudtxt = document.createTextNode(`Cloud cover: ${clouds}%`);
-	cloud.appendChild(cloudtxt);
+	//cloudtxt = document.createTextNode(`Cloud cover: ${clouds}%`);
+	cloud.appendChild(document.createTextNode(`Cloud cover: ${clouds}%`));
+	/*function list(ul){
+		ul.appendChild(ul);
+	}
+	list(rain);
+	list(wind);
+	list(temp);
+	list(cloud);*/
 
 	ul.appendChild(rain); //appends <li>Rain</li> to <ul>
 	ul.appendChild(wind); // appends <li>Wind</li>
 	ul.appendChild(temp);
 	ul.appendChild(cloud);
 	div.appendChild(h2); // appends <div><h2>Time</h2></div>
-	div.appendChild(ul); // appends <ul> with content ot <div>
+	div.appendChild(ul); // appends <ul> with content to <div>
 	//document.getElementById('forecasts').appendChild(div); // this appends the div created to the div with id="forecasts" in the HTML
 	
 	// to attach to the <section> tag.
